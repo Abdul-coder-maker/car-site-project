@@ -1,0 +1,110 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #043f58;
+  color: white;
+}
+.support {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.4s, opacity 0.4s;
+  -o-transition: max-height 0.4s, opacity 0.4s;
+  transition: max-height 0.4s, opacity 0.4s;
+}
+.header-menu-support:checked ~ .support {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.about {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.4s, opacity 0.4s;
+  -o-transition: max-height 0.4s, opacity 0.4s;
+  transition: max-height 0.4s, opacity 0.4s;
+}
+.header-menu-about:checked ~ .about {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+#toggle {
+  display: none;
+}
+
+.big-nav {
+  -webkit-transform: translateY(-120%);
+  -ms-transform: translateY(-120%);
+  transform: translateY(-120%);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.4s;
+  transition: opacity 0.5s linear, -webkit-transform 0.4s;
+  -o-transition: opacity 0.5s linear, transform 0.4s;
+  transition: opacity 0.5s linear, transform 0.4s;
+  transition: opacity 0.5s linear, transform 0.4s, -webkit-transform 0.4s;
+}
+
+.toggle:checked ~ .big-nav {
+  opacity: 1;
+  -webkit-transition: opacity 0.85s ease 250ms, -webkit-transform 0.75s;
+  transition: opacity 0.85s ease 250ms, -webkit-transform 0.75s;
+  -o-transition: opacity 0.85s ease 250ms, transform 0.75s;
+  transition: opacity 0.85s ease 250ms, transform 0.75s;
+  transition: opacity 0.85s ease 250ms, transform 0.75s, -webkit-transform 0.75s;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.main__cars__content {
+  max-width: 1680px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+@media (min-width: 991px) {
+  .main__cars__content {
+    padding: 0 48px;
+  }
+}
+.main__cars__content__down {
+  max-width: 1680px;
+}
+
+@media (max-width: 1023px) {
+  .support-footer {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.4s, opacity 0.4s;
+    -o-transition: max-height 0.4s, opacity 0.4s;
+    transition: max-height 0.4s, opacity 0.4s;
+  }
+  .header-menu-support-footer:checked ~ .support-footer {
+    opacity: 1;
+    max-height: 1000px;
+  }
+
+  .about-footer {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.4s, opacity 0.4s;
+    -o-transition: max-height 0.4s, opacity 0.4s;
+    transition: max-height 0.4s, opacity 0.4s;
+  }
+  .header-menu-about-footer:checked ~ .about-footer {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
